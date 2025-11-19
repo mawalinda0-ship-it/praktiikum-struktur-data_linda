@@ -1,0 +1,58 @@
+def push(self, item):
+    # Menambahkan item ke tumpukan (di akhir list)
+    self.items.append(item)
+
+def pop(self):
+    # Menghapus dan mengembalikan elemen terakhir (top of stack)
+    if not self.is_empty():
+        return self.items.pop()
+    return None
+
+def peek(self):
+    # Melihat elemen di atas stack tanpa menghapusnya
+    if not self.is_empty():
+        return self.items[-1]
+    return None
+
+def is_empty(self):
+    # Mengecek apakah stack kosong
+    return len(self.items) == 0
+
+def size(self):
+    # Mengembalikan jumlah elemen dalam stack
+    return len(self.items)
+
+    class Queue:
+def __init__(self):
+    # Menggunakan deque agar operasi efisien di kedua ujung
+    self.items = deque()
+
+def enqueue(self, item):
+    # Menambahkan item ke belakang antrian
+    self.items.append(item)
+
+def dequeue(self):
+    # Menghapus dan mengembalikan item dari depan antrian
+    if not self.is_empty():
+        return self.items.popleft()
+    return None
+
+def front(self):
+    # Melihat elemen pertama dalam antrian tanpa menghapusnya
+    if not self.is_empty():
+        return self.items[0]
+    return None
+
+def rear(self):
+    # Melihat elemen terakhir dalam antrian tanpa menghapusnya
+    if not self.is_empty():
+        return self.items[-1]
+    return None
+
+def is_empty(self):
+    # Mengecek apakah antrian kosong
+    return len(self.items) == 0
+
+def size(self):
+    # Mengembalikan jumlah elemen dalam antrian
+    return len(self.items)
