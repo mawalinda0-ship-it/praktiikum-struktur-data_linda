@@ -27,25 +27,40 @@ class Stack:
         # Mengembalikan jumlah elemen dalam stack
         return len(self.items)
 
-        #creating queue and Queue operations
-        queue = []
-        #Enqueue
-        queue.append('A')
-        queue.append('B')
-        queue.append('C')
-        print("Queue: ", queue)
+        class Queue:
+    def __init__(self):
+        # Menggunakan deque agar operasi efisien di kedua ujung
+        self.items = deque()
 
-        #Dequeue
-        elemen = queue.pop(0)
+    def enqueue(self, item):
+        # Menambahkan item ke belakang antrian
+        self.items.append(item)
 
-        #peek
-        FrontElemen = queue[0]
-        print("peek: ", FromElemen)
+    def dequeue(self):
+        # Menghapus dan mengembalikan item dari depan antrian
+        if not self.is_empty():
+            return self.items.popleft()
+        return None
 
-        #isEmpty
-        isEmpty = not bool (queue)
-        print("isEmpty: ", isEmpty)
+    def front(self):
+        # Melihat elemen pertama dalam antrian tanpa menghapusnya
+        if not self.is_empty():
+            return self.items[0]
+        return None
 
-        #size
-        print("size: ", len(queue))
-        
+    def rear(self):
+        # Melihat elemen terakhir dalam antrian tanpa menghapusnya
+        if not self.is_empty():
+            return self.items[-1]
+        return None
+
+    def is_empty(self):
+        # Mengecek apakah antrian kosong
+        return len(self.items) == 0
+
+    def size(self):
+        # Mengembalikan jumlah elemen dalam antrian
+        return len(self.items)
+
+
+
