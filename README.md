@@ -26,3 +26,26 @@ class Stack:
     def size(self):
         # Mengembalikan jumlah elemen dalam stack
         return len(self.items)
+
+        #creating queue and Queue operations
+        queue = []
+        #Enqueue
+        queue.append('A')
+        queue.append('B')
+        queue.append('C')
+        print("Queue: ", queue)
+
+        #Dequeue
+        elemen = queue.pop(0)
+
+        #peek
+        FrontElemen = queue[0]
+        print("peek: ", FromElemen)
+
+        #isEmpty
+        isEmpty = not bool (queue)
+        print("isEmpty: ", isEmpty)
+
+        #size
+        print("size: ", len(queue))
+        
